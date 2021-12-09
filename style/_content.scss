@@ -1,0 +1,217 @@
+.content {
+    width: calc(100% - 350px);
+
+    &__top {
+        display: flex;
+        margin-bottom: 62px;
+    }
+
+    &__label {
+        font-weight: 600;
+        line-height: 1.2;
+        
+        &:first-child {
+            padding-left: 12px;
+        }
+    }
+
+    &__checkbox {
+        display: block;
+        border-radius: 20px;
+        background-color: $primary-color;
+        cursor: pointer;
+        width: 40px;
+        height: 24px;
+        position: relative;
+
+        &-wrap {
+            padding: 0 30px;
+        }
+        
+
+        & > input {
+            display: none;
+
+            &:checked + span {
+                left: 19px;
+            }
+        }
+
+        & > span {
+            width: 18px;
+            height: 18px;
+            background-color: $white-color;
+            border-radius: 50%;
+            display: block;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            transition: all 0.3s;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: -12px;
+    }
+
+    &__card {
+        background-color: $white-color;
+        border-radius: 8px;
+        padding: 24px;
+
+        &-wrap {
+            width: 50%;
+            padding: 12px;
+        }
+
+        &-top {
+            height: 24px;
+            margin-bottom: 8px;
+            line-height: 1.2;
+            display: flex;
+            align-items: center;
+        }
+
+        &-name {
+            margin-bottom: 42px;
+            font-size: 36px;
+            font-family: $montserrat-font;
+            line-height: 1.2;
+        }
+
+        &-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &-info {
+            display: flex;
+            align-items: center;
+        }
+
+        &-item {
+            display: flex;
+            align-items: center;
+
+            &:first-child {
+                margin-right: 16px;
+                line-height: 0;
+            }
+
+            & > svg {
+                width: 16px;
+                height: 16px;
+                margin-right: 8px;
+            }
+
+            & > span {
+                line-height: 1.2;
+                font-size: 14px;
+            }
+        }
+
+        &-link { 
+            line-height: 1.2;
+            font-weight: 600;
+            white-space: nowrap;
+            padding-right: 4px;
+        }
+
+        &-tag {
+            background-color: $light-grey-color;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            padding: 0 4px;
+            font-weight: 600;
+        }
+
+        &-share-link {
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                
+                svg {
+                    transform: scale(1.2);
+                }
+            }
+            
+            & > svg {
+                width: 18px;
+                height: 18px;
+                margin-right: 4px;
+                transition: all 0.3s;
+            }
+        }
+    }
+
+    &__user {
+
+        &-info {
+            display: flex;
+            align-items: center;
+        }
+
+        &-img {
+            width: 24px;
+            height: 24px;
+            min-width: 24px;
+            display: block;
+            background-color: $grey-color;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        &-name {
+            font-size: 14px;
+            line-height: 1.2;
+            font-weight: 600;
+        }
+    }
+
+    &__share {
+        font-size: 18px;
+        line-height: 1.4;
+        color: $red-color;
+        cursor: pointer;
+
+        &:hover {
+            color: $grey-color;
+        }
+    }
+}
+
+@media(max-width: $tablet) {
+
+    .content {
+
+        &__top {
+            justify-content: center;
+        }
+
+        &__label:first-child {
+            padding-left: 0;
+        }
+
+        &__card-name {
+            font-size: 24px;
+        }
+    }
+}
+
+@media(max-width: $mobile) {
+
+    .content {
+        width: 100%; 
+
+        &__card-wrap {
+            width: 100%;
+        }
+    }
+}
