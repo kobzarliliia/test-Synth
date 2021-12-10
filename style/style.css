@@ -111,12 +111,13 @@ a {
   margin-right: 17px;
   cursor: pointer;
 }
-.header__user-data:hover span,
-.header__user-data:hover svg {
+.header__user-data:hover .header__user-name,
+.header__user-data:hover .header__user-arrow {
   color: #ED5267;
 }
-.header__user-data > svg {
+.header__user-arrow {
   transition: all 0.3s;
+  min-width: 16px;
 }
 .header__user-name {
   margin-right: 20px;

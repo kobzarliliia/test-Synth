@@ -36,15 +36,16 @@
             cursor: pointer;
 
             &:hover {
-                span,
-                svg {
+                .header__user-name,
+                .header__user-arrow {
                     color: $primary-color;
                 }
             }
+        }
 
-            & > svg {
-                transition: all 0.3s;
-            }
+        &-arrow {
+            transition: all 0.3s;
+            min-width: 16px;
         }
 
         &-name {
